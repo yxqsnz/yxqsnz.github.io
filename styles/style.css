@@ -1,3 +1,45 @@
+@keyframes sideBarItemHover {
+    from {
+        color: azure;
+    }
+    to {
+        color: #7289da
+    }
+}
 #main {
-   text-align: center;
+    background-color: lightslategrey;
+}
+#btn_sb {
+    background:transparent; 
+    border:none; 
+    color:transparent;
+}
+#content {
+    color: azure;
+    text-align: center;
+}
+#navBar {
+    border-radius: 15px;
+}
+#avatar {
+    height: 50px;
+    width: 50px;
+    border-radius: 60%;
+}
+#author {
+    padding-left: 1%;
+    padding-right: 10%;
+}
+#navBarItens {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.navBarItem {
+    color: azure;
+    text-decoration: none;
+}
+.sideBarItem:hover {
+    animation-name: sideBarItemHover;
+    animation-duration: 500ms;
+    color: #7289da
 }
