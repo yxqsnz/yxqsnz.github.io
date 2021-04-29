@@ -26,7 +26,7 @@ async function load() {
         viewButton.className = "btn view-button"
         viewButton.innerText = "view"
         viewA.href = pageURL;
-        viewA.target = "body"
+        viewA.target = "_blank"
         viewA.appendChild(viewButton)
 
         followerCard.appendChild(follower_avatar)
