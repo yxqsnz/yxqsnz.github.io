@@ -1,26 +1,27 @@
-let isSideBarHidden = false;
-const avatar_button = document.getElementById("btn_sb");
-const side_bar = document.getElementById("sidebar");
-const avatar_container = document.getElementById("avatar_container");
-const sidebar_button = document.getElementById("sidebar_button");
-const sidebar_button_text = document.getElementById("sidebar_button_text");
-const sidebar_button_image_open = document.getElementById("sidebar_button_image_open")
-const sidebar_button_image_close = document.getElementById("sidebar_button_image_close")
-sidebar_button_image_open.style.display = "none";
-sidebar_button.addEventListener("click",on_btn_sidebar_click);
-function on_btn_sidebar_click() {
-    if (!isSideBarHidden) {
-        side_bar.style.animationName = "sideBarAnimationHide"
-        sidebar_button_image_close.style.display = "none"
-        sidebar_button.style.display = "none"
-        setTimeout(() => {
-            sidebar_button.style.display = "ruby"
-            sidebar_button_image_open.style.display = "ruby"
-            sidebar_button_image_open.style.height = "100%"
-            side_bar.style.background = "none"
-        },1400);
-    } else {
-    
-    }
-    avatar_container.style.display = "ruby"
+const info = document.getElementById("profile_info");
+const frame = document.getElementById("frame");
+const followers_button = document.getElementById("flwbtn")
+const current_location = window.location.host
+const homeButton = document.getElementById("home-btn");
+
+homeButton.addEventListener("click", () => {
+    frame.src = `./pages/info.html`
+})
+followers_button.addEventListener("click",on_flwbtn_click)
+
+function on_flwbtn_click() {
+    frame.src = `./pages/followers.html`
 }
+frame.src = `./pages/info.html`
+let default_text = "yxqsnz 2021"
+async function load_info() {
+    const req = await axios('https://api.github.com/users/yxqsnz');
+    const res = req.data;
+    const x = res.followers;
+    default_text = `yxqsnz 2021 followers count: ${x}`
+    info.innerText =  default_text;
+}
+load_info()
+setInterval(() => {
+    load_info()
+}, 10000);
