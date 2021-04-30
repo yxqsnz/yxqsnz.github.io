@@ -23,7 +23,7 @@ async function load() {
        
         const viewA = document.createElement("a");
         const viewButton = document.createElement('button')
-        viewButton.className = "btn view-button"
+        viewButton.className = "button"
         viewButton.innerText = "view"
         viewA.href = pageURL;
         viewA.target = "_blank"
