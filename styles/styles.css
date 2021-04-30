@@ -77,7 +77,7 @@
     background-color: var(--bs-dark);
 }
 .follower_name {
-   
+    word-wrap: break-word;
     color: azure
 }
 #followers {

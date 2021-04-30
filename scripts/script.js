@@ -23,5 +23,6 @@ async function load_info() {
 }
 load_info()
 setInterval(() => {
-    load_info()
-}, 10000);
+    console.log("Updating followers count...");
+    load_info();
+}, 60000);
