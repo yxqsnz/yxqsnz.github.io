@@ -4,6 +4,7 @@ async function load() {
     const res = req.data;
     res.reverse()
     for (it of res) {
+
         const name = it.login;
         const pageURL = it.html_url;
         const avatarURL = it.avatar_url;
@@ -20,7 +21,7 @@ async function load() {
         const username = document.createElement("p");
         username.innerText = name;
         username.className = "follower_name"
-       
+
         const viewA = document.createElement("a");
         const viewButton = document.createElement('button')
         viewButton.className = "button"
