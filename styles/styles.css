@@ -170,3 +170,14 @@
   text-decoration: none;
   color: var(--bs-blue)
 }
+#searchContainer {
+    text-align: center;
+}
+#searchQuery {
+    background: var(--bs-white);
+    color: azure;
+    margin: 10px 5px;
+
+    border-radius: 4px;
+    border-color: var(--bs-white);
+}

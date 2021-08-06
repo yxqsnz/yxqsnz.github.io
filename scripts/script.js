@@ -16,28 +16,27 @@ homeButton.addEventListener("click", () => {
 aboutMeButton.addEventListener('click',() => {
     frame.src = `./pages/about-me.html`
 })
-followers_button.addEventListener("click",on_flwbtn_click)
+followers_button.addEventListener("click", onFollowButtonClick)
 
-function on_flwbtn_click() {
+function onFollowButtonClick() {
     frame.src = `./pages/followers.html`
 }
-let default_text = "yxqsnz 2021"
-async function load_info() {
+let default_text = "YXQSNZ 2021"
+async function loadInformation() {
     const req = await axios(urls.GITHUB_API);
     const res = req.data;
     const x = res.followers;
-    default_text = `yxqsnz 2021 followers count: ${x}`
+    default_text = `YXQSNZ 2021 followers count: ${x}`
     info.innerText =  default_text;
 }
 
 
-async function main() {
+function main() {
     frame.src = `./pages/info.html`
     avatar.src = urls.AVATAR;
-    await load_info();
-    setInterval(() => {
+    loadInformation().then(() => setInterval(() => {
         console.log("Updating followers count...");
-        load_info();
-    }, 60000);
+        loadInformation();
+    }, 60000));
 }
 main();

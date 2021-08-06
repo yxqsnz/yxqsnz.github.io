@@ -2,7 +2,8 @@ const followersContainer = document.getElementById("followers-container")
 async function load() {
     const req = await axios('https://api.github.com/users/yxqsnz/followers');
     const res = req.data;
-    res.reverse()
+    //res.reverse()
+
     for (it of res) {
 
         const name = it.login;
@@ -25,7 +26,7 @@ async function load() {
         const viewA = document.createElement("a");
         const viewButton = document.createElement('button')
         viewButton.className = "button"
-        viewButton.innerText = "view"
+        viewButton.innerText = "Go"
         viewA.href = pageURL;
         viewA.target = "_blank"
         viewA.appendChild(viewButton)
