@@ -1,3 +1,13 @@
+const go = window.location.href.split('go=')[1]
+let cancel_loading = false;
+if (go) {	
+	document.clear();
+	cancel_loading = true;
+	console.log('yxqShort: link found!');
+	axios(`https://yxqsnz.000webhostapp.com/cors/?url=https://paste.rs/${go}`).then(response => {
+		window.location.href = response.data
+	})
+}
 const urls = {
     LOADING_SPINNER: 'https://git.wp-china.org/wp-plugins/watermark-protect-images/raw/commit/145d8b235337519b8ef0dd7945130349749fed05/assets/images/spinner.gif',
     GITHUB_API: "https://api.github.com/users/yxqsnz",
@@ -16,6 +26,7 @@ homeButton.addEventListener("click", () => {
 aboutMeButton.addEventListener('click',() => {
     frame.src = `./pages/about-me.html`
 })
+
 followers_button.addEventListener("click", onFollowButtonClick)
 
 function onFollowButtonClick() {
@@ -39,4 +50,6 @@ function main() {
         loadInformation();
     }, 60000));
 }
-main();
+if (!cancel_loading)
+	main();
+
