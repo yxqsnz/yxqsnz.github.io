@@ -1,30 +1,46 @@
-// TODO: Rewrite this code.
-const redirURL = window.location.href.split("go=")[1];
-let isRedirecting = false;
-if (redirURL) {
-  document.clear();
-  isRedirecting = true;
-  console.log("yxqsnz's shorter: link found!");
-  document.title = `YS: ${redirURL}`;
-  axios(
-    `https://yxqsnz.000webhostapp.com/cors/?url=https://paste.rs/${redirURL}`
-  ).then((response) => {
-    window.location.href = response.data;
-  });
-}
+const followersButton = document.getElementById("flwbtn");
+const aboutMeButton = document.getElementById("about-me");
+const homeButton = document.getElementById("home-btn");
+const avatar = document.getElementById("avatar");
+const frame = document.getElementById("frame");
+const info = document.getElementById("profile_info");
+
+const getRedirectUrl = () =>
+      ((href) =>
+        href.includes('r=')
+          || href.includes("go=")
+          || href.includes("sh=")
+          || href.includes("url=")
+      )(window.location.href) ? ((href) =>
+        href.split("r=")        [1]
+          || href.split("go=")  [1]
+          || href.split("sh=")  [1]
+          || href.split("url=") [1]
+      )(window.location.href)
+      : null;
+const cors = (url) => `https://yxqsnz.000webhostapp.com/cors/?url=${url}`;
+const predirectUrl = getRedirectUrl();
+const isRedirecting = predirectUrl != null;
+const redirectUrl = cors(`https://paste.rs/${getRedirectUrl()}`);
 const urls = {
   LOADING_SPINNER:
     "https://git.wp-china.org/wp-plugins/watermark-protect-images/raw/commit/145d8b235337519b8ef0dd7945130349749fed05/assets/images/spinner.gif",
   GITHUB_API: "https://api.github.com/users/yxqsnz",
   AVATAR: "https://github.com/yxqsnz.png",
 };
+async function redirect() {
+  console.log(`R(LOAD_URL): ${redirectUrl}`);
+  const url = await fetch(redirectUrl).then(response => response.text());
+  console.log(`R(URL): ${url}`);
+  document.title = `R: ${url}`;
+  setInterval(() =>
+    document.querySelector("#main").remove();
+    document.writeln("-> REDIRECTING TO: ${url}");
+    window.location.href = url;
 
-const info = document.getElementById("profile_info");
-const frame = document.getElementById("frame");
-const followersButton = document.getElementById("flwbtn");
-const aboutMeButton = document.getElementById("about-me");
-const homeButton = document.getElementById("home-btn");
-const avatar = document.getElementById("avatar");
+    , 300);
+}
+
 homeButton.addEventListener("click", () => {
   frame.src = `./pages/info.html`;
 });
@@ -57,3 +73,4 @@ function main() {
   );
 }
 if (!isRedirecting) main();
+else redirect();
