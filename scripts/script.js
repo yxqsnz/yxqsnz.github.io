@@ -33,12 +33,11 @@ async function redirect() {
   const url = await fetch(redirectUrl).then(response => response.text());
   console.log(`R(URL): ${url}`);
   document.title = `R: ${url}`;
-  setInterval(() =>
+  setInterval(() => {
     document.querySelector("#main").remove();
     document.writeln("-> REDIRECTING TO: ${url}");
     window.location.href = url;
-
-    , 300);
+  }, 300);
 }
 
 homeButton.addEventListener("click", () => {
