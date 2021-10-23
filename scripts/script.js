@@ -1,7 +1,7 @@
 // TODO: Rewrite this code.
 const redirURL = window.location.href.split("go=")[1];
 let isRedirecting = false;
-if (reditURL) {
+if (redirURL) {
   document.clear();
   isRedirecting = true;
   console.log("yxqsnz's shorter: link found!");
