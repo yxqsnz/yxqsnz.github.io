@@ -35,7 +35,7 @@ async function redirect() {
   document.title = `R: ${url}`;
   setInterval(() => {
     document.querySelector("#main").remove();
-    document.writeln("-> REDIRECTING TO: ${url}");
+    document.writeln(`REDIRECTING TO: ${url}`);
     window.location.href = url;
   }, 300);
 }
