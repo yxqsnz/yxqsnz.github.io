@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/yxqsnz
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://yxqsnz.github.io
+  * I am yxqsnz (https://keybase.io/yxqsnz) on keybase.
+  * I have a public key ASCxPW6hCR08MC5k9YAXXCK4t2hKKgFwk_xYOrx8PtzRlgo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120b42ddc101bb0609973ddb5ae9fede531b1957c0b36c4965e2a8ae3fe2451949b0a",
+      "host": "keybase.io",
+      "kid": "0120b13d6ea1091d3c302e64f580175c22b8b7684a2a017093fc583abc7c3edcd1960a",
+      "uid": "840781a979e6e9fbc93d0434d4c93719",
+      "username": "yxqsnz"
+    },
+    "merkle_root": {
+      "ctime": 1650482633,
+      "hash": "76d0ad4ab55a813daac818a6ce41262c607815c698bf32c9aa24511b8a9fd427bad39b487fb723232044f61dabe20b59a2ac160f3daf8cc745b8d5b3f3b5a2b0",
+      "hash_meta": "b1746df6a6ffb032fb1e228378be70c357f9694f34b338ad92b2dc4d73bba00c",
+      "seqno": 22332812
+    },
+    "service": {
+      "entropy": "DRvDtuUpgjY0lZECLfpzKaEG",
+      "hostname": "yxqsnz.github.io",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.3"
+  },
+  "ctime": 1650482652,
+  "expire_in": 504576000,
+  "prev": "2046129170348b64fe8b499b6afd6cad509595a208a84c2766e725e485797d34",
+  "seqno": 21,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgsT1uoQkdPDAuZPWAF1wiuLdoSioBcJP8WDq8fD7c0ZYKp3BheWxvYWTESpcCFcQgIEYSkXA0i2T+i0mbav1srVCVlaIIqEwnZucl5IV5fTTEIMp4A6wyazqKXgBUcgikQMVmOB38zTill9wW8WJxSCFRAgHCo3NpZ8RAL1rA9JlxU1RAsipteeqFKe5zQM1roMqqLYqbuHqhIrsI3oczm95e5ZAVOIRA3a5eEKGKGvzDXGkOlXxJQukBD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINzTrJLa6ioWRAIQOr+3otBjCOh66d9RgfOAlZ9CXuPNo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/yxqsnz
+
+==================================================================
