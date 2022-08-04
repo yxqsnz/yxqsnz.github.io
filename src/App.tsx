@@ -7,7 +7,7 @@ const App: Component = () => {
   const Route = useRoutes(routes);
 
   return (
-    <div class="dark">
+    <div>
       <nav class="sticky top-0 z-10 bg-gray-200 text-gray-900 px-4 backdrop-filter backdrop-blur-lg bg-opacity-30">
         <div class="flex items-center justify-between h-16">
 
