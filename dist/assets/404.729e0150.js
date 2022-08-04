@@ -1,0 +1,1 @@
+import{t}from"./index.102826dc.js";const o=t('<section class="text-gray-700 p-8"><h1 class="text-2xl font-bold">404: Not Found</h1><p class="mt-4">You have typed URL correcty?</p></section>');function s(){return o.cloneNode(!0)}export{s as default};
